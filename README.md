@@ -1,2 +1,2 @@
 # ResumX
-A Simple resume builder website
+A simple resume builder website

@@ -617,3 +617,37 @@ experience__title{
   }
 
 }
+
+/*========== EDIT TEXT BUTTON ==========*/
+
+.btn-group button {
+  background-color: var(--text-color); 
+  border: 1px solid var(--title-color);
+  color: var(--container-color);
+  padding: 10px 24px;
+  cursor: pointer;
+  float: left;
+}
+
+.btn-group button:not(:last-child) {
+  border-right: none;
+}
+
+/* Clear floats (clearfix hack) */
+.btn-group:after {
+  content: "";
+  clear: both;
+  display: table;
+}
+
+/* Add a background color on hover */
+.btn-group button:hover {
+  background-color: var(--text-color-light);
+}
+
+/* The sticky class is added to the navbar with JS when it reaches its scroll position */
+.sticky {
+  position: fixed;
+  top: 0;
+  width: 100%;
+}

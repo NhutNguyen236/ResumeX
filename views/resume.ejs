@@ -10,6 +10,12 @@
         <!--========== CSS ==========-->
         <link href="/stylesheets/style_resume.css" rel="stylesheet" />
 
+        <!--========== FILEPOND ==========-->
+        <link href="https://unpkg.com/filepond/dist/filepond.css" rel="stylesheet">
+        <!--    FilePondPluginImagePreview Plug-in unit CSS-->
+        <link href="https://unpkg.com/filepond-plugin-image-preview/dist/filepond-plugin-image-preview.css" rel="stylesheet">
+        <!--    FilePondPluginImageEdit Plug-in unit CSS-->
+        <link href="https://unpkg.com/filepond-plugin-image-edit/dist/filepond-plugin-image-edit.css" rel="stylesheet">
         <title>Resume Template</title>
     </head>
     <body>
@@ -76,6 +82,7 @@
                 <button onclick="document.execCommand('bold',false,null);"><i class='bx bx-bold'></i> Bold</button>
                 <button onclick="document.execCommand('italic',false,null);"><i class='bx bx-italic' ></i> Italic</button>
                 <button onclick="document.execCommand('underline',false,null);"></i><i class='bx bx-underline'></i> Underline</button>
+                <button onclick="document.execCommand('download',false,null);"></i><i class='bx bx-download'></i> Download as PDF</button>
 
             </div>
 
@@ -87,7 +94,8 @@
                         <section class="home" id="home">
                             <div class="home__container section bd-grid">
                                 <div class="home__data bd-grid">
-                                    <img src="/images/avatar.jpg" alt="Avatar" class="home__img">
+                                    <!-- <img src="/images/avatar.jpg" alt="Avatar" class="home__img"> -->
+                                    <input type="file" class="filepond" name="filepond" accept="image/png, image/jpg">
                                     <h1 id="editor" class="home__Title" contenteditable="true">Iris <b>Huynh</b></h1>
                                     <h3 id="editor" class="home_profession" contenteditable="true">Web Developer</h3>
                                 </div>
@@ -110,7 +118,7 @@
                             <!-- Theme change button -->
                             <i class="bx bx-moon change-theme" title="Theme" id="theme-button"></i>
                             <!-- Button to generate and download the pdf. Available for desktop.-->
-                            <a type="submit"><i class="bx bx-download generate-pdf" title="Generate PDF" id="resume-button"></i></a>
+                            <a type="submit" href="http://pdfcrowd.com/url_to_pdf/"><i class="bx bx-download generate-pdf" title="Generate PDF" id="resume-button"></i></a>
                         </section>          
                         
                         <!--========== SOCIAL ==========-->
@@ -401,5 +409,20 @@
         <!-- <script src="assets/js/html2pdf.bundle.min.js"></script> -->
         <!--========== MAIN JS ==========-->
         <script src="/javascripts/main.js"></script>
+        <!-- FilePondPluginImagePreview Plug-in unit js-->
+        <script src="https://unpkg.com/filepond-plugin-image-preview/dist/filepond-plugin-image-preview.js"></script>
+        <!--FilePondPluginImageEdit Plug-in unit js-->
+        <script src="https://unpkg.com/filepond-plugin-image-edit/dist/filepond-plugin-image-edit.js"></script>
+        <!--FilePondPluginFileValidateSize Plug-in unit js-->
+        <script src="https://unpkg.com/filepond-plugin-file-validate-size/dist/filepond-plugin-file-validate-size.js"></script>
+        <!--FilePondPluginFileValidateType Plug-in unit js-->
+        <script src="https://unpkg.com/filepond-plugin-file-validate-type/dist/filepond-plugin-file-validate-type.js"></script>
+        <!--FilePondPluginImageCrop Plug-in unit js-->
+        <script src="https://unpkg.com/filepond-plugin-image-crop/dist/filepond-plugin-image-crop.js"></script>
+        <!--FilePondPluginImageExifOrientation Plug-in unit js-->
+        <script src="https://unpkg.com/filepond-plugin-image-exif-orientation/dist/filepond-plugin-image-exif-orientation.js"></script>
+        <!--Introduce Filepond Of js-->
+        <script src="https://unpkg.com/filepond/dist/filepond.js"></script>
+        <script src="/javascripts/filePond.js"></script>
     </body>
 </html>

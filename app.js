@@ -3,6 +3,7 @@ var express = require("express");
 var path = require("path");
 var cookieParser = require("cookie-parser");
 var logger = require("morgan");
+var puppeteer = require("puppeteer");
 
 var indexRouter = require("./routes/index");
 var templateRouter = require("./routes/template");
@@ -41,6 +42,11 @@ app.use(function (err, req, res, next) {
     // render the error page
     res.status(err.status || 500);
     res.render("error");
+});
+
+app.post("/uploadAvatar", function (req, res, next) {
+    // Not yet - Cannot generate to PDF and download it
+    res.render("success");
 });
 
 //####################### Listen Requests  #################

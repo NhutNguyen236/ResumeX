@@ -95,7 +95,9 @@ body.scale-cv{
 /*========== Classes modified to reduce size and print on A4 sheet ==========*/
 
 .scale-cv .change-theme,
-.scale-cv .generate-pdf{
+.scale-cv .generate-pdf,
+.scale-cv .upload-button,
+.scale-cv .edit-button{
   display: none;
 }
 
@@ -334,7 +336,8 @@ img{
 .home__img{
   width: 120px;
   height: 120px;
-  object-fit:cover;
+  background-color: var(--text-color);
+  object-fit: cover;
   border-radius: 50%;
   justify-self: center;
   margin-bottom: var(--mb-1);
@@ -654,7 +657,7 @@ experience__title{
 
 /* ================= FILEPOND STYLING ======================*/
 /* * FilePond Custom Styles */
-.filepond--drop-label {
+/* .filepond--drop-label {
     color: #4c4e53;
 }
 .filepond--label-action {
@@ -664,10 +667,38 @@ experience__title{
     background-color: #edf0f4;
 }
 /** * Page Styles */
-html {
+/* html {
     padding: 20vh 0 0;
 }
 .filepond--root {
     width: 170px;
     margin: 0 auto;
+} */
+
+/* ================= AVATAR UPLOAD ======================*/
+
+#preview {
+  position: relative;
+}
+
+input[type="file"] {
+  display: none;
+}
+
+#upload-button {
+  padding: 10px;
+  border-radius: 70%;
+  border: none;
+  cursor: pointer;
+  background-color: var(--container-color);
+  box-shadow: 0px 3px 5px -1px rgba(0, 0, 0, 0.2),
+    0px 6px 10px 0px rgba(0, 0, 0, 0.14), 0px 1px 18px 0px rgba(0, 0, 0, 0.12);
+  transition: background-color ease-out 120ms;
+  position: absolute;
+  right: -5%;
+  bottom: 0%;
+}
+
+#upload-button:hover {
+  background-color: var(--text-color-light);
 }

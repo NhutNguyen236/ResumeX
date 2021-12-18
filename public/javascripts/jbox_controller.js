@@ -1,38 +1,50 @@
 $(document).ready(function () {
-    new jBox("Tooltip", {
-        attach: ".tooltip",
-        getContent: "data-content",
-        onInit: function () {
-            // Add click events to the attached elements
-            $.each(
-                this.attachedElements,
-                function (index, el) {
-                    $(el).on(
-                        "click",
-                        function () {
-                            $("#demo-state-container").html(
-                                "You clicked " +
-                                    this.source.attr("data-content") +
-                                    "!"
-                            );
-                        }.bind(this)
-                    );
-                }.bind(this)
-            );
-        },
-        onOpen: function () {
-            // The active attached element is saved in this.source as a jQuery element
-            var source = this.source;
+	// tooltip for languages
+    new jBox("Mouse", {
+		attach: "#languages_editor",
+		theme: "TooltipDark",
+		content: "Pick your most fluent languages here 😁",
+	});
 
-            // We need to remove the hover-active class from all attached elements
-            // because the onClose function does not trigger when we reopen right away
-            $.each(this.attachedElements, function (index, el) {
-                $(el).removeClass("hover-active").html("Hover me!");
-            });
-            this.source.addClass("hover-active").html("Now click me!");
-        },
-        onClose: function () {
-            this.source.removeClass("hover-active").html("Hover me!");
-        },
+    // certificates tooltip
+    new jBox("Mouse", {
+		attach: "#certificates",
+		theme: "TooltipDark",
+		content: "Pick your most favorite certificates here 😁",
+	});
+    
+    // experience tooltip
+    new jBox("Mouse", {
+        attach: "#experience",
+        theme: "TooltipDark",
+        content: "Add your work experience here 😁",
+    });
+
+    // skills tooltip
+    new jBox("Mouse", {
+        attach: "#skills",
+        theme: "TooltipDark",
+        content: "Add your skills here 😁",
+    });
+
+    // education tooltip
+    new jBox("Mouse", {
+        attach: "#education",
+        theme: "TooltipDark",
+        content: "Add your education here 😁",
+    });
+
+    // profile tooltip
+    new jBox("Mouse", {
+        attach: "#profile",
+        theme: "TooltipDark",
+        content: "Tell us more about you 🧐",
+    });
+
+    // projects tooltip
+    new jBox("Mouse", {
+        attach: "#project_tooltip",
+        theme: "TooltipDark",
+        content: "Add your projects here 😁",
     });
 });

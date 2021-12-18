@@ -61,9 +61,7 @@ function scrollActive() {
                 .querySelector(".nav__menu a[href*=" + sectionId + "]")
                 .classList.add("active-link");
         } else {
-            document
-                .querySelector(".nav__menu a[href*=" + sectionId + "]")
-                .classList.remove("active-link");
+            // document.querySelector(".nav__menu a[href*=" + sectionId + "]").classList.remove("active-link");
         }
     });
 }
@@ -133,7 +131,7 @@ let resumeButton = document.getElementById("resume-button");
 let opt = {
     margin: 0,
     filename: "myResume.pdf",
-    image: { type: "jpg", quality: 0.95 },
+    image: { type: "jpg", quality: 0.99 },
     html2canvas: { scale: 4 },
     jsPDF: { format: "a4", orientation: "portrait" },
 };

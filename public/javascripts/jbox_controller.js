@@ -47,4 +47,7 @@ $(document).ready(function () {
         theme: "TooltipDark",
         content: "Add your projects here 😁",
     });
+
+    // notification for download template
+    
 });

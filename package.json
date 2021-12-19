@@ -24,6 +24,7 @@
     "license": "ISC",
     "description": "",
     "devDependencies": {
+        "editorjs-inline-font-size-tool": "^1.0.1",
         "nodemon": "^2.0.15"
     }
 }

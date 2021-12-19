@@ -1,8 +1,11 @@
-var express = require('express');
+var express = require("express");
 var router = express.Router();
 
-router.get('/template', function(req, res, next) {
-  res.render('resume');
+var data  = [];
+
+router.get("/template", function (req, res, next) {
+	  res.render("resume", {"data": "data"});
 });
 
 module.exports = router;
+ 

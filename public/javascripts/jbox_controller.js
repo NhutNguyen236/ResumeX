@@ -1,53 +1,59 @@
 $(document).ready(function () {
 	// tooltip for languages
-    new jBox("Mouse", {
+	new jBox("Mouse", {
 		attach: "#languages_editor",
 		theme: "TooltipDark",
 		content: "Pick your most fluent languages here 😁",
 	});
 
-    // certificates tooltip
-    new jBox("Mouse", {
+	// certificates tooltip
+	new jBox("Mouse", {
 		attach: "#certificates",
 		theme: "TooltipDark",
 		content: "Pick your most favorite certificates here 😁",
 	});
-    
-    // experience tooltip
-    new jBox("Mouse", {
-        attach: "#experience",
-        theme: "TooltipDark",
-        content: "Add your work experience here 😁",
-    });
 
-    // skills tooltip
-    new jBox("Mouse", {
-        attach: "#skills",
-        theme: "TooltipDark",
-        content: "Add your skills here 😁",
-    });
+	// experience tooltip
+	new jBox("Mouse", {
+		attach: "#experience",
+		theme: "TooltipDark",
+		content: "Add your work experience here 😁",
+	});
 
-    // education tooltip
-    new jBox("Mouse", {
-        attach: "#education",
-        theme: "TooltipDark",
-        content: "Add your education here 😁",
-    });
+	// skills tooltip
+	new jBox("Mouse", {
+		attach: "#skills",
+		theme: "TooltipDark",
+		content: "Add your skills here 😁",
+	});
 
-    // profile tooltip
-    new jBox("Mouse", {
-        attach: "#profile",
-        theme: "TooltipDark",
-        content: "Tell us more about you 🧐",
-    });
+	// education tooltip
+	new jBox("Mouse", {
+		attach: "#education",
+		theme: "TooltipDark",
+		content: "Add your education here 😁",
+	});
 
-    // projects tooltip
-    new jBox("Mouse", {
-        attach: "#project_tooltip",
-        theme: "TooltipDark",
-        content: "Add your projects here 😁",
-    });
+	// profile tooltip
+	new jBox("Mouse", {
+		attach: "#profile",
+		theme: "TooltipDark",
+		content: "Tell us more about you 🧐",
+	});
 
-    // notification for download template
-    
+	// projects tooltip
+	new jBox("Mouse", {
+		attach: "#project_tooltip",
+		theme: "TooltipDark",
+		content: "Add your projects here 😁",
+	});	
 });
+
+// notification for download template
+function noticeDownload() {
+    new jBox("Notice", {
+        content: "We are collecting data from your template, please wait",
+        color: "green",
+        autoClose: 10000,
+    });
+}

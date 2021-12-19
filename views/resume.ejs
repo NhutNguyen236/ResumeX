@@ -9,7 +9,7 @@
 			rel="stylesheet"
 			href="https://cdn.jsdelivr.net/npm/boxicons@latest/css/boxicons.min.css"
 		/>
-        <link rel="icon" type="image/x-icon" href="/images/favicon1.ico" />
+		<link rel="icon" type="image/x-icon" href="/images/favicon1.ico" />
 
 		<!--========== CSS ==========-->
 		<link href="/stylesheets/style_resume.css" rel="stylesheet" />
@@ -570,7 +570,11 @@
 
 						<!--========== REFERENCES ==========-->
 						<section class="reference section" id="project">
-							<h2 class="section-title" contenteditable="true" id="project_tooltip">
+							<h2
+								class="section-title"
+								contenteditable="true"
+								id="project_tooltip"
+							>
 								Projects
 							</h2>
 
@@ -701,6 +705,39 @@
 				</div>
 			</form>
 		</main>
+		<!-- Messenger helper-->
+		<!-- Messenger Chat plugin Code -->
+		<div id="fb-root"></div>
+
+		<!-- Your Chat plugin code -->
+		<div id="fb-customer-chat" class="fb-customerchat"></div>
+
+		<script>
+			var chatbox = document.getElementById("fb-customer-chat");
+			chatbox.setAttribute("page_id", "101829015704922");
+			chatbox.setAttribute("attribution", "biz_inbox");
+		</script>
+
+		<!-- Your SDK code -->
+		<script>
+			window.fbAsyncInit = function () {
+				FB.init({
+					xfbml: true,
+					version: "v12.0",
+				});
+			};
+
+			(function (d, s, id) {
+				var js,
+					fjs = d.getElementsByTagName(s)[0];
+				if (d.getElementById(id)) return;
+				js = d.createElement(s);
+				js.id = id;
+				js.src =
+					"https://connect.facebook.net/en_US/sdk/xfbml.customerchat.js";
+				fjs.parentNode.insertBefore(js, fjs);
+			})(document, "script", "facebook-jssdk");
+		</script>
 
 		<!--========== SCROLL TOP ==========-->
 		<a href="#" class="scrolltop" id="scroll-top">
@@ -716,6 +753,6 @@
 		<!--========== MAIN JS FILES==========-->
 		<script src="/javascripts/main.js"></script>
 		<script src="/javascripts/editor.js"></script>
-        <script src="/javascripts/jbox_controller.js"></script>
+		<script src="/javascripts/jbox_controller.js"></script>
 	</body>
 </html>
